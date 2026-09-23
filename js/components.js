@@ -1,0 +1,17 @@
+/* Datos centrales: agregar una sección aquí actualiza la navegación, tarjetas y pie. */
+const SITE_SECTIONS=[
+ {id:'home',number:'00',name:'Página principal',url:'index.html',icon:'house',description:'Una visión general del Área de Seguridad.'},
+ {id:'gestion',number:'01',name:'Gestión de tecnología',url:'pages/gestion-tecnologia.html',icon:'settings',description:'Gestión y organización de los recursos tecnológicos.'},
+ {id:'ciencia',number:'02',name:'Ciencia, tecnología e innovación',url:'pages/ciencia-tecnologia-innovacion.html',icon:'flask-conical',description:'Tecnología e innovación aplicadas al área.'},
+ {id:'mision',number:'03',name:'Misión y visión',url:'pages/mision-vision.html',icon:'target',description:'El propósito y la dirección de Grupo Vertex.'},
+ {id:'organigrama',number:'04',name:'Organigrama',url:'pages/organigrama.html',icon:'network',description:'La estructura organizacional del área.'},
+ {id:'posiciones',number:'05',name:'Descripción de posiciones',url:'pages/descripcion-posiciones.html',icon:'users',description:'Funciones y responsabilidades del equipo.'},
+ {id:'mbti',number:'06',name:'MBTI',url:'pages/mbti.html',icon:'brain',description:'Una perspectiva sobre los perfiles del equipo.'},
+ {id:'scrum',number:'07',name:'SCRUM',url:'pages/scrum.html',icon:'git-branch',description:'Marco de trabajo para la organización.'},
+ {id:'idef0',number:'08',name:'IDEF0',url:'pages/idef0.html',icon:'workflow',description:'Modelado funcional de procesos.'}
+];
+const isPages=location.pathname.includes('/pages/');const toUrl=s=>isPages?s.url.replace('pages/',''):s.url;const active=document.body.dataset.page;
+function navLinks(){return SITE_SECTIONS.map(s=>`<a href="${toUrl(s)}" ${s.id===active?'aria-current="page"':''}><i data-lucide="${s.icon}"></i><span>${s.name}</span></a>`).join('')}
+class SiteNavigation extends HTMLElement{connectedCallback(){this.innerHTML=`<header class="mobile-header"><a class="mobile-header__brand" href="${toUrl(SITE_SECTIONS[0])}"><i data-lucide="shield-check"></i> SEGURIDAD</a><button class="mobile-menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-sidebar"><i data-lucide="menu"></i></button></header><div class="drawer-overlay" aria-hidden="true"></div><aside id="site-sidebar" class="site-sidebar" aria-label="Navegación principal"><a class="brand" href="${toUrl(SITE_SECTIONS[0])}"><span class="brand__mark"><i data-lucide="shield-check"></i></span><span class="brand__name">Seguridad<small>Grupo Vertex</small></span></a><button class="expand-button" type="button" aria-label="Fijar menú expandido"><i data-lucide="panel-left-open"></i></button><button class="mobile-close" type="button" aria-label="Cerrar menú"><i data-lucide="x"></i></button><nav class="site-nav">${navLinks()}</nav></aside>`}}
+class SiteFooter extends HTMLElement{connectedCallback(){this.innerHTML=`<footer class="site-footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><span class="brand__mark"><i data-lucide="shield-check"></i></span><div>SEGURIDAD<br><small>Grupo Vertex</small><p>Área universitaria orientada a la seguridad, la tecnología y la mejora continua.</p></div></div><div class="footer__links"><h2>Secciones</h2>${SITE_SECTIONS.slice(1,5).map(s=>`<a href="${toUrl(s)}">${s.name}</a>`).join('')}</div></div><p class="footer__bottom">© <span id="year"></span> Grupo Vertex · Área de Seguridad</p></div></footer>`}}
+customElements.define('site-navigation',SiteNavigation);customElements.define('site-footer',SiteFooter);

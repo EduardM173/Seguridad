@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Área de Seguridad — Grupo Vertex.">
+  <title>Área de Seguridad | Grupo Vertex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css"><link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/components/navigation.css"><link rel="stylesheet" href="css/components/buttons.css"><link rel="stylesheet" href="css/components/cards.css"><link rel="stylesheet" href="css/components/sections.css"><link rel="stylesheet" href="css/components/footer.css"><link rel="stylesheet" href="css/pages/home.css"><link rel="stylesheet" href="css/responsive.css">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="js/components.js" defer></script><script src="js/navigation.js" defer></script><script src="js/animations.js" defer></script><script src="js/main.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <site-navigation></site-navigation>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Grupo Vertex</p>
+          <h1 id="hero-title">Área de<br><span>Seguridad</span></h1>
+          <p class="hero__lead">Protegemos la información, los sistemas y los recursos tecnológicos mediante una gestión integral, preventiva y estratégica.</p>
+          <div class="hero__actions"><a class="button button--primary" href="#enfoque">Conocer el área <i data-lucide="arrow-right"></i></a><a class="button button--ghost" href="#secciones">Explorar secciones</a></div>
+        </div>
+        <div class="security-visual reveal" data-optional-image="assets/images/home/hero-seguridad.webp" aria-label="Prevención, análisis, gestión y monitoreo" role="img">
+          <!-- Colocar opcionalmente assets/images/home/hero-seguridad.webp; el diseño CSS funciona sin ella. -->
+          <div class="security-visual__grid"></div><div class="security-visual__line line--one"></div><div class="security-visual__line line--two"></div>
+          <div class="security-visual__shield"><i data-lucide="shield-check"></i></div><span class="visual-node node--one"></span><span class="visual-node node--two"></span><span class="visual-node node--three"></span>
+          <span class="visual-tag tag--one">Prevención</span><span class="visual-tag tag--two">Análisis</span><span class="visual-tag tag--three">Gestión</span><span class="visual-tag tag--four">Monitoreo</span>
+        </div>
+      </div>
+    </section>
+    <section class="section protection" aria-labelledby="protegemos-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Nuestra responsabilidad</p><h2 id="protegemos-title">Qué protegemos</h2></div><div class="protection__grid">
+      <article class="protection__item reveal"><i data-lucide="database"></i><div><h3>Información</h3><p>Datos confiables y disponibles para la organización.</p></div></article>
+      <article class="protection__item reveal"><i data-lucide="monitor"></i><div><h3>Sistemas</h3><p>Servicios tecnológicos con controles apropiados.</p></div></article>
+      <article class="protection__item reveal"><i data-lucide="workflow"></i><div><h3>Procesos</h3><p>Operaciones ordenadas y orientadas a la mejora.</p></div></article>
+      <article class="protection__item reveal"><i data-lucide="users"></i><div><h3>Personas</h3><p>Una cultura que reconoce y previene riesgos.</p></div></article>
+    </div></div></section>
+    <section id="enfoque" class="section approach" aria-labelledby="enfoque-title"><div class="container"><div class="section-heading section-heading--center reveal"><p class="eyebrow">Método de trabajo</p><h2 id="enfoque-title">Nuestro enfoque</h2><p>Una mirada continua para anticipar, gestionar y acompañar.</p></div><ol class="approach__steps">
+      <li class="reveal"><span>01</span><i data-lucide="search"></i><h3>Identificar</h3><p>Reconocemos activos, necesidades y escenarios relevantes.</p></li><li class="reveal"><span>02</span><i data-lucide="chart-no-axes-column-increasing"></i><h3>Analizar</h3><p>Valoramos el contexto para orientar las decisiones.</p></li><li class="reveal"><span>03</span><i data-lucide="shield-check"></i><h3>Proteger</h3><p>Aplicamos medidas preventivas y de gestión.</p></li><li class="reveal"><span>04</span><i data-lucide="activity"></i><h3>Monitorear</h3><p>Observamos resultados y promovemos la mejora continua.</p></li>
+    </ol></div></section>
+    <section id="secciones" class="section sections" aria-labelledby="secciones-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Explora nuestro contenido</p><h2 id="secciones-title">Secciones principales</h2></div><div id="section-cards" class="section-cards" aria-label="Enlaces a las secciones del sitio"></div></div></section>
+    <section class="vertex-banner" data-optional-image="assets/images/home/grupo-vertex.webp" aria-labelledby="vertex-title"><div class="container vertex-banner__content reveal"><div><p class="eyebrow">Área de seguridad</p><h2 id="vertex-title">Grupo Vertex</h2><p>Conectamos seguridad, tecnología, gestión y mejora continua para construir confianza.</p></div><div class="vertex-banner__facts"><div><strong>Compromiso</strong><span>Seguridad</span></div><div><strong>Enfoque</strong><span>Prevención</span></div><div><strong>Resultado</strong><span>Confianza</span></div></div><a class="button button--light" href="pages/mision-vision.html">Nuestra misión y visión <i data-lucide="arrow-right"></i></a></div></section>
+    <section class="section resources" aria-labelledby="recursos-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Recursos</p><h2 id="recursos-title">Videos destacados</h2><p>Material preparado para complementar el contenido del área.</p></div><div id="video-cards" class="video-cards"></div></div></section>
+  </main>
+  <site-footer></site-footer>
+</body></html>
